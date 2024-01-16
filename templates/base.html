@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="{{url_for('static',filename='script.js')}}" defer></script>
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            background-image: url("{{url_for('static',filename='Cloudy.svg')}}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        footer {
+            background-image: none;
+        }
+    </style>
+    <nav class="navbar navBar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand container-fluid">
+            <a class="navbar-item">
+                <h1 class="title is-3 is-spaced">Sas2k</h1>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="." class="navbar-item">
+                Home
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a href="#about" class="navbar-item">
+                        About
+                        </a>
+                        <a class="navbar-item">
+                        Contact
+                        </a>
+                        <a href="/projects" class="navbar-item">
+                        Projects
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="https://github.com/Sas2k" class="navbar-item">
+                        Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                <div class="buttons">
+                    <a class="icons" href="https://github.com/Sas2k">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/github.png"/>
+                    </a>
+                    <a class="icons" href="https://www.linkedin.com/in/sasen-perera-884516273/">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"/>
+                    </a>
+                    <a class="icons" href="https://stackoverflow.com/users/17240786/sasen-perera">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/stackoverflow.png"/>
+                    </a>
+                    <a class="icons" href="https://dev.to/sas2k">
+                        <img src="https://img.icons8.com/windows/50/000000/dev.png"/>
+                    </a>
+                    <a class="icons" href="https://leetcode.com/Sas2k/">
+                        <img src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/96/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-bold-tal-revivo.png"/>
+                    </a>
+                    <a class="icons" href="https://www.twitter.com/Sas8dp">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png"/>
+                    </a>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </nav>
+</head>
+<body>
+{% block body %}
+{% endblock %}
+</body>
+<footer class="footer has-background-white has-text-black">
+    <div class="content has-text-centered ">
+        <p>
+            By <strong>Sas2k</strong>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+        <p>
+            <a href="https://github.com/Sas2k/#">Made with <span class="icon has-text-danger">&#10084;&#65039;</span></a>
+        </p>
+        <p>Copyright © <span id="year"></span></p>
+    </div>
+</footer>

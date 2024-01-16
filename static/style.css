@@ -1,0 +1,37 @@
+* {
+    scroll-behavior: smooth;
+}
+
+.icons {
+    margin: 5px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    margin: 10px;
+}
+
+.projects {
+    margin: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.project{
+    margin: 2% !important;
+    border: 1px solid #4d66d3;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+#arrow {
+    margin: 10px;
+    font-size: 100px;
+}
+
+a:hover {
+    color: #4d66d3;
+}

@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+    <section class="hero is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container">
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <h1 class="title is-1 is-spaced has-text-white">Sasen Perera</h1>
+                        <h2 class="subtitle is-3 has-text-white">Full Stack Developer + Software Developer + Teenager</h2>
+                    </div>
+                    <div class="flex-item">
+                        <a class="is-transparent" href="#about">
+                            <span id="arrow">&#11206;</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a class="button is-info is-rounded" href="">
+                        <strong>Resume</strong>
+                    </a>
+                    <a class="button is-light is-rounded" href="">
+                        <strong>Projects</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="hero is-fullheight has-text-white">
+        <div class="hero-body">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h2 class="title is-2 is-spaced has-text-white">&#128075; Hey There!</h1>
+                    <h3 class="subtitle is-4 is-spaced has-text-white">
+                        I'm Sasen Perera, A (Hobby-ist) Programmer who also has the ability to do Full-Stack
+                        I've been at this since I was 9. I go by my online alias Sas2k. <br>
+                        I'm <span id="age"></span> years old. I'm currently a student at <a href="https://www.thurstancollege.com/">Thurstan College</a><br>
+                    </h3>
+                </div>
+                <div class="flex-item">
+                    <a class="is-transparent" href="#skills">
+                        <span id="arrow">&#11206;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="hero is-fullheight has-text-white">
+        <div class="hero-header">
+            <div class="container">
+                <h2 class="title is-2 is-spaced has-text-white">Skills</h2>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h3 class="title is-3 is-spaced has-text-white">Languages</h3>
+                    <hr>
+                    <ul>
+                        <li class="subtitle is-4 is-spaced has-text-white">Python</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">JavaScript</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">HTML</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">CSS</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">SQL</li>
+                    </ul>
+                </div>
+                <div class="flex-item">
+                    <h3 class="title is-3 is-spaced has-text-white">Frameworks</h3>
+                    <hr>
+                    <ul>
+                        <li class="subtitle is-4 is-spaced has-text-white">Flask</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">Django</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">TailWind CSS</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">Bulma CSS</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">Bootstrap</li>
+                    </ul>
+                </div>
+                <div class="flex-item">
+                    <h3 class="title is-3 is-spaced has-text-white">General Libraries</h4>
+                    <hr>
+                    <ul>
+                        <li class="subtitle is-4 is-spaced has-text-white">NumPy</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">Matplotlib</li>
+                    </ul>
+                </div>
+                <div class="flex-item">
+                    <h3 class="title is-3 is-spaced has-text-white">Tools</h3>
+                    <hr>
+                    <ul>
+                        <li class="subtitle is-4 is-spaced has-text-white">Git</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">GitHub</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">VSCode</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">Jupyter Notebook</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">Google Colab</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">Heroku</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">Postman</li>
+                        <li class="subtitle is-4 is-spaced has-text-white">Replit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
