@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Projects{% endblock %}
 {% block body %}
-    <section class="Hero is-fullheight">
+    <section class="Hero is-fullheight-with-nav">
         <div class="container projects columns">
             <div class="column card project is-one-quarter">
                 <div class="card-content">
@@ -80,6 +80,63 @@
                 </footer>
             </div>
         </div>
-        
+        <div class="container columns projects">
+            <div class="column card project is-one-quarter">
+                <div class="card-content">
+                    <p class="title">
+                    ⚡ Zap!
+                    </p>
+                    <p class="subtitle">
+                    A Terminal Rest Client built with Node.js
+                    </p>
+                    <a href="https://sas2k.github.io/Zap/docs/build">Website</a>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                    <a href="https://github.com/Sas2k/Zap" class="card-footer-item">
+                    <span class="icons"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></span>
+                    Github
+                    </a>
+                    </p>
+                </footer>
+            </div>
+            <div class="column card project is-one-quarter">
+                <div class="card-content">
+                    <p class="title">
+                    💭 Random XKCDer
+                    </p>
+                    <p class="subtitle">
+                    A website which displays a random XKCD comic, usable in HTML or Markdown. Built with Python
+                    </p>
+                    <a href="http://random-xkcder.vercel.app/">Website</a>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                    <a href="https://github.com/Sas2k/random-xkcder" class="card-footer-item">
+                    <span class="icons"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></span>
+                    Github
+                    </a>
+                    </p>
+                </footer>
+            </div>
+            <div class="column card project is-one-quarter">
+                <div class="card-content">
+                    <p class="title">
+                    🚂 ToyBase
+                    </p>
+                    <p class="subtitle">
+                    A Micro/Toy Database System written in python
+                    </p>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                    <a href="https://github.com/Sas2k/ToyBase" class="card-footer-item">
+                    <span class="icons"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></span>
+                    Github
+                    </a>
+                    </p>
+                </footer>
+            </div>
+        </div> 
     </section>
 {% endblock %}
