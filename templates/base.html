@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/metro/26/s.png">
     <script src="{{url_for('static',filename='script.js')}}" defer></script>
     <title>{% block title %}{% endblock %}</title>
     <style>
@@ -19,7 +20,7 @@
     </style>
     <nav class="navbar navBar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand container-fluid">
-            <a class="navbar-item">
+            <a href="." class="navbar-item">
                 <h1 class="title is-3 is-spaced">Sas2k</h1>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -33,6 +34,50 @@
                 <a href="." class="navbar-item">
                 Home
                 </a>
+                <a class="navbar-item js-modal-trigger" data-target="modal-js-example">
+                    Contact
+                </a>
+                <div id="modal-js-example" class="modal">
+                    <div class="modal-background"></div>
+                
+                    <div class="modal-content">
+                        <div class="box">
+                            <form class="form" action="{{ url_for('index')}}" method="post">
+                                <div class="field">
+                                    <label class="label">Name</label>
+                                    <div class="control">
+                                        <input name="UserName" class="input" type="text" placeholder="Text input">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <div class="control has-icons-left has-icons-right">
+                                        <input name="UserEmail" class="input" type="email" placeholder="Email input">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <span class="icon is-small is-right">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Message</label>
+                                    <div class="control">
+                                        <textarea name="TextBody" class="textarea" placeholder="Textarea"></textarea>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <button type="submit" class="button is-link">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                
+                    <button class="modal-close is-large" aria-label="close"></button>
+                </div>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                         More
@@ -41,14 +86,11 @@
                         <a href="#about" class="navbar-item">
                         About
                         </a>
-                        <a class="navbar-item">
-                        Contact
-                        </a>
-                        <a href="/projects" class="navbar-item">
+                        <a href="/projects" class="navbar-item" target="_blank">
                         Projects
                         </a>
                         <hr class="navbar-divider">
-                        <a href="https://github.com/Sas2k" class="navbar-item">
+                        <a href="https://github.com/Sas2k" class="navbar-item" target="_blank">
                         Source
                         </a>
                     </div>
@@ -57,22 +99,22 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                 <div class="buttons">
-                    <a class="icons" href="https://github.com/Sas2k">
+                    <a class="icons" href="https://github.com/Sas2k" target="_blank">
                         <img src="https://img.icons8.com/ios-filled/50/000000/github.png"/>
                     </a>
-                    <a class="icons" href="https://www.linkedin.com/in/sasen-perera-884516273/">
+                    <a class="icons" href="https://www.linkedin.com/in/sasen-perera-884516273/" target="_blank">
                         <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"/>
                     </a>
-                    <a class="icons" href="https://stackoverflow.com/users/17240786/sasen-perera">
+                    <a class="icons" href="https://stackoverflow.com/users/17240786/sasen-perera" target="_blank">
                         <img src="https://img.icons8.com/ios-filled/50/000000/stackoverflow.png"/>
                     </a>
-                    <a class="icons" href="https://dev.to/sas2k">
+                    <a class="icons" href="https://dev.to/sas2k" target="_blank">
                         <img src="https://img.icons8.com/windows/50/000000/dev.png"/>
                     </a>
-                    <a class="icons" href="https://leetcode.com/Sas2k/">
+                    <a class="icons" href="https://leetcode.com/Sas2k/" target="_blank">
                         <img src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/96/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-bold-tal-revivo.png"/>
                     </a>
-                    <a class="icons" href="https://www.twitter.com/Sas8dp">
+                    <a class="icons" href="https://www.twitter.com/Sas8dp" target="_blank">
                         <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png"/>
                     </a>
                 </div>
@@ -89,11 +131,11 @@
     <div class="content has-text-centered ">
         <p>
             By <strong>Sas2k</strong>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY NC SA 4.0</a>.
         </p>
         <p>
-            <a href="https://github.com/Sas2k/#">Made with <span class="icon has-text-danger">&#10084;&#65039;</span></a>
+            <a href="https://github.com/Sas2k/#" target="_blank">Made with <span class="icon has-text-danger">&#10084;&#65039;</span></a>
         </p>
         <p>Copyright © <span id="year"></span></p>
     </div>
